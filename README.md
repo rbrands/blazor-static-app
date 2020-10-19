@@ -19,3 +19,7 @@ _Note: If you're using the Azure Functions CLI tools, refer to [the documentatio
 ## Deploy to Azure Static Web Apps
 
 This application can be deployed to [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps), to learn how, check out [our quickstart guide](https://aka.ms/blazor-swa/quickstart).
+
+## Further patterns used
+
+To access the backend api a class BackendApiRepository is created in Client/Utils to centralize the access to the backend.
