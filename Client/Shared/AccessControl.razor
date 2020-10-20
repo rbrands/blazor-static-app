@@ -6,16 +6,10 @@
 <AuthorizeView>
     <Authorized>
         @context.User.Identity.Name!
-        <a href="#" @onclick="BeginSignOut">Log out</a>
+        <a href="/.auth/logout">Abmelden</a>
     </Authorized>
     <NotAuthorized>
         <a href="/LoginProviders">Anmelden</a>
     </NotAuthorized>
 </AuthorizeView>
 
-@code{
-    private void BeginSignOut(MouseEventArgs args)
-    {
-        Navigation.NavigateTo("/.auth/logout");
-    }
-}
