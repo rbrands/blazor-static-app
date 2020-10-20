@@ -20,6 +20,10 @@ _Note: If you're using the Azure Functions CLI tools, refer to [the documentatio
 
 This application can be deployed to [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps), to learn how, check out [our quickstart guide](https://aka.ms/blazor-swa/quickstart).
 
-## Further patterns used
+## Calling backend services
 
 To access the backend api a class BackendApiRepository is created in Client/Utils to centralize the access to the backend.
+
+## Authentication and authorization
+
+Authentication and authorization can easily be implemented as described in https://docs.microsoft.com/en-us/azure/static-web-apps/authentication-authorization. But to get the authentication/authorization tools provided with Blazor working an AuthenticationStateProvider is needed. An example - it's really easy - is provided by Anthony Chu, see https://anthonychu.ca/post/blazor-auth-azure-static-web-apps/ and on GitHub https://github.com/anthonychu/blazor-auth-static-web-apps. The AuthenticationStateProvider is used in this example to get the ClientPrincipal converted to a standard ClaimsPrincipal. AuthorizeView etc are working with this implementation. On server side see function GetUserDetails how the user identity can be leveraged.
