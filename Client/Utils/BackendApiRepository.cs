@@ -26,6 +26,10 @@ namespace BlazorApp.Client.Utils
         {
             return await _http.GetStringAsync($"/api/GetConfigValue?name={name}");
         }
+        public async Task<ClientPrincipal> GetUserDetails()
+        {
+            return await _http.GetFromJsonAsync<ClientPrincipal>($"/api/GetUserDetails");
+        }
 
     }
 }
