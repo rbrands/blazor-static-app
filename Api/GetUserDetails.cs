@@ -25,7 +25,7 @@ namespace BlazorApp.Api
                 IdentityProvider = "devtest",
                 UserId = "test123",
                 UserDetails = "rbrands",
-                UserRoles = new String[] { "anonymous", "authenticated" }
+                UserRoles = new String[] { "anonymous", "authenticated", "admin" }
             };
 
             string header = req.Headers["x-ms-client-principal"];
